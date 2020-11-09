@@ -1,5 +1,5 @@
 <sdf version="1.4">
-    <model name="dd_robot">
+    <model name="ddb_robot">
     <link name='chassis'>
         <pose>0 0 0.1 0 0 0</pose>
         <static>true</static>

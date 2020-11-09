@@ -1,0 +1,7 @@
+#swpawn a box
+rosrun gazebo_ros spawn_model -file box.sdf -sdf -z 1 -model ddb_box_0
+
+
+
+#spawn robot. need to be in models dir
+rosrun gazebo_ros spawn_model -file model.sdf -sdf -z 1 -model ddb_box_1
