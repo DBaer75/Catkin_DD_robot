@@ -9,11 +9,17 @@ try:
     curses.cbreak()
     curses.noecho()
     curses.halfdelay(6) #sets to trigger exception after no input for (TenthsSeconds)
+
+    #screen to show current command
     statusScr = curses.newwin(10,35,2,45)
+
+    #create screan for header
     statusHeader = curses.newwin(1,35,0,45)
     statusHeader.clear()
     statusHeader.addstr(0,5,'CURRENT COMMAND')
     statusHeader.refresh()
+
+    #create screen to show input instructions
     instructionsScr = curses.newwin(10,35,0,0)
     instructionsScr.clear()
     instructionsScr.addstr(0,10,'COMMANDS')
@@ -25,8 +31,9 @@ try:
     instructionsScr.addstr(6,10,'q = quit')
     instructionsScr.refresh()
 
-    prevKey  = -1
 
+    #main loop
+    prevKey  = -1
     while True:
         try:
             currKey = statusScr.getch()
